@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Untuk Kamu ❤️</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Surat Cinta Langsung -->
+        <div class="letter-card">
+            <div class="heart-icon">❤️</div>
+            
+            <h1 id="greetingText">Halo istri aku</h1>
+            <p id="subGreeting">Baca perlahan ya, ini dari hati aku 🤍</p>
+            
+            <div class="flower-decoration">🌸🌼🌸</div>
+            
+            <div class="message-scroll">
+                <p class="love-message" id="message1">
+                    Setiap hari tuh rasanya kurang lengkap kalau belum denger suara kamu. Senyum kamu tuh kayak vitamin buat hati aku.
+                </p>
+                <p class="love-message" id="message2">
+                    Makasih ya selalu sabar sama aku yang kadang centil, kadang rewel. Kamu tuh rumah paling nyaman buat pulang.
+                </p>
+                <p class="love-message" id="message3">
+                    Kadang aku mikir 'beruntung banget ya aku punya kamu'. Kamu datang tepat waktu, pas aku paling butuh seseorang jadi alasan buat tersenyum.
+                </p>
+                <p class="love-message" id="message4">
+                    Aku gak tau masa depan bakal gimana, tapi yang aku tau, aku mau jalani semuanya bareng kamu. Kamu bukan cuma pacar, kamu rumah. ❤️
+                </p>
+            </div>
+
+            <div class="gif-container">
+                <div class="floating-hearts">💕 ❤️ 💖</div>
+            </div>
+
+          <div class="love-meter">
+    <span>💕 Seberapa besar cintaku ke kamu? 💕</span>
+    <div class="slider-container">
+        <input type="range" id="loveSlider" min="0" max="100" value="75" class="love-slider">
+        <div class="slider-value">
+            <span id="sliderPercent">75</span>%
+        </div>
+    </div>
+    <div class="slider-message" id="sliderMessage">
+        Geser ke kanan untuk lihat seberapa besar cintaku! 💖
+    </div>
+</div>
+            <!-- GALERI FOTO KENANGAN -->
+            <div class="memory-gallery">
+                <h3 class="gallery-title">📸 Klik fotonya, ada pesan rahasia lho ✨</h3>
+                <div class="photo-grid" id="photoGrid">
+                    <div class="photo-card" data-message="Ini foto pertama kamu yang dikirim ke aku. yaa walaupun tidak full face tapi disitu aku yakin kamu pasti cantik banget.❤️">
+                        <img src="assets/1.jpeg" alt="Kenangan 1" class="memory-photo">
+                        <div class="photo-caption">📸 Klik aku!</div>
+                    </div>
+                    <div class="photo-card" data-message="kamu mau tau nggak apa yang aku suka dari foto ini? KAMU, bukan cuman foto ini tapi puluhan foto kamu di aku akan selalu jadi foto favorit aku karena kamu selalu cantik.❤️">
+                        <img src="assets/2.jpeg" alt="Kenangan 2" class="memory-photo">
+                        <div class="photo-caption">📸 Klik aku!</div>
+                    </div>
+                    <div class="photo-card" data-message="aduh kamu melet di foto ini tuh bikin aku bener bener kepelet banget tau, bukan cuman cantik tapi kamu juga lucu.🥰">
+                        <img src="assets/3.jpeg" alt="Kenangan 3" class="memory-photo">
+                        <div class="photo-caption">📸 Klik aku!</div>
+                    </div>
+                    <div class="photo-card" data-message="foto ini juga salah satu favorit aku tau sayang, kamu selalu cantik di mata aku, jadi mau gimana pun pose atau angle foto nya kamu bakal keliatan cantik.💑">
+                        <img src="assets/4.jpeg" alt="Kenangan 4" class="memory-photo">
+                        <div class="photo-caption">📸 Klik aku!</div>
+                    </div>
+                    <div class="photo-card" data-message="ini foto yang kamu edit di gemini kan ya? foto yang aku suka juga karena aku pengen foto itu jadi kenyataan nantinya yang dimana bukan dari ai lagi tapi wujud kita yang asli. 💑">
+                        <img src="assets/5.jpeg" alt="Kenangan 5" class="memory-photo">
+                        <div class="photo-caption">📸 Klik aku!</div>
+                    </div>
+                    <div class="photo-card" data-message="ini gemes banget, banyak foto kamu yang gemes dan lucu banget apalagi yang cantik banget itu semua cantik. Tapi ini juga lucu banget sayang. 💑">
+                        <img src="assets/6.jpeg" alt="Kenangan 6" class="memory-photo">
+                        <div class="photo-caption">📸 Klik aku!</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-secondary" id="surpriseBtn">🎁 Klik untuk kejutan</button>
+            </div>
+
+            <p class="signature">Dari aku yang selalu <span class="heart-red">❤️</span> kamu</p>
+        </div>
+    </div>
+
+    <!-- Modal untuk pesan kejutan -->
+    <div class="modal hidden" id="surpriseModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🌸 Untuk Kamu 🌸</h3>
+                <button class="modal-close" id="closeModalBtn">✖</button>
+            </div>
+            <div class="modal-body">
+                <p id="surpriseMessage">
+                    Kamu tuh alasan kenapa aku percaya sama hal-hal manis di dunia ini.
+                    <br><br>
+                    I love you lebih dari kata-kata bisa jelasin. 💕
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal untuk pesan dari foto -->
+    <div class="modal hidden" id="photoMessageModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>💌 Pesan dari aku untuk kamu 💌</h3>
+                <button class="modal-close" id="closePhotoModalBtn">✖</button>
+            </div>
+            <div class="modal-body">
+                <p id="photoMessageText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
